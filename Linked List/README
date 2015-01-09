@@ -1,0 +1,12 @@
+README:
+=======
+
+1.	Creating a Linked List
+	--	class Node
+2.	Deleting a node from a singly linked list
+3.	runner technique
+	--	runner: second pointer
+		iterate through the linked list with two pointers simultaneously, with one ahead of the other. The fast one might be ahead by a fixed amount
+4.	recursive problem
+	--	a number of linked list problems rely on recursion
+	--	recursive algorithms takes at least O(N) space, where n is the depth of the recursive call

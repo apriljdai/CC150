@@ -1,0 +1,15 @@
+README:
+=======
+
+1.	Hash table 
+	--	has an underlying array and a hash function. When you want to insert an object and its key, the hash function maps the key to an integer,which indicates the index in the array
+	--	The hash value of all possible keys must be unique
+	--	instead of making an extremely large array and storing objects at index hash(key), we can make the array much smaller and store objects in a linked list at index hash(key) % array_length
+	--	implement the hash table with a binary search tree, then guarantee an o(logn) lookup time
+
+2.	Arraylist (dynamically resizing)
+	--	an array that resizes itself as needed while still providing o(1) access.
+	--	when the array is full, the array doubles in size, each doubling takes o(n) time.
+
+3.	StringBuffer
+	--	creates an array of all the strings, copying them back to a string only when necessary
