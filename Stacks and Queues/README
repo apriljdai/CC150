@@ -1,0 +1,7 @@
+README:
+=======
+
+1.	Implementing a stack
+	--	a stack can be implemented using a linked list. essentially the same thing, except that a stack usually prevents the user from "peeking" at items below the top node
+2.	Implementing a queue
+	--	a queue can be implemented with a linked list, with new items added ot the tails of the linked list
