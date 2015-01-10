@@ -1,0 +1,25 @@
+README:
+=======
+
+1.	Bubble Sort
+	--	runtime: O(N^2) average and worst case
+	--	memory: O(1)
+	start at the beginning of the array and swap the first two elements if the first is greater than the second
+2.	Selection Sort
+	--	runtime: O(N^2) average and worst case
+	--	memory: O(1)
+	find the smallest element using a linear scan and move it to the front
+3.	Merge Sort
+	--	runtime: O(Nlog(N)) average and worst case
+	--	memory: depends
+	divides the array in half, sorts each of those halves, and then merges them back together
+4.	Quick Sort
+	--	runtime: O(Nlog(N)) average, O(N^2) worst case
+	--	memory: O(log(N))
+	pick a random element and partition the array, such that all numbers that are less than the partitioning element come before all elements that are greater than it
+5.	Radix Sort
+	--	runtime: O(kn)
+	sorting algorithm for integers that takes advantage of the fact that integes have a finite number of bits
+	iterate through each digit of the number, grouping numbers by each digit
+	n is the number of elements 
+	k is the number of passes of the sorting algorithm
