@@ -1,0 +1,44 @@
+README:
+=======
+
+1.	Approach system design problem
+	--	make believe
+		- prettend that the data can all fit on one machine and there are no memory limitations.(provide the general outline for your solution)
+	--	get real
+		- How much data can you fit on one machine
+		- what problems will occur when you split the data up
+		figuring out how to logically divide the data up, and how one machine would identify where to look up a different piece of data
+	--	solve problems
+		solve the issues identified above.
+2.	Information, Strategies and Issues(need to know)
+	--	typical system
+		though super-computers are still in use, most web-based companies use large systems of interconnected machines
+		|	Component				|	Typical Capacity/Value	|
+		| hard drive space			|
+		| memory					|
+		| internet transfer latency	|
+	--	dividing up lots of data
+		data simply must be divided up across machines(what data belongs on which machine)
+		- by order of appearance
+		  as new data comes in, we wait for our current machine to fill up beore adding an additional machine
+		  has the advantage of never using more machines than are necessary
+		  the lookup table may be more complex and potentially very large
+		- by hash value
+		  1) pick some sort of key relating to the data
+		  2) hash the key
+		  3) mod the hash value by the number of machines
+		  4) store the data on the machine with that value(the data is stored on machine #[mod(hash(key), N)])
+		  advantage: no need for a lookup table (every machine will automatically know where a piece of data)
+		  disadvantage: a machine may get more data and eventually exceed its capacity(need shift data around the other machines for better load balancing(expensive) / split this machine's data into two machines(causing tree-like structure))
+		- by actual value
+		  dividing up data by hash value is essentially arbitrary
+		  be able to reduce system latency by using information about what the data represents
+		- arbitrarily
+		  data frequently just gets arbitrarily broken up and be implement a lookup table to identify which machine holds a piece of data.
+		  while this does necessitate a potentially large lookup table
+		  it simplifies some aspects of system design and can enable us to do better loading balancing
+	--	Steps
+		- forget about the large amount of things(documents, files, etc.) and pretend just had a few dozen stuff and try to solve them
+		- divide up the things across many machines(depending on a variety of factors), process one thing on one machine and push the results off to other machines
+		- need a way to knowing which machine holds a piece fo data, what does lookup table look like, where is it stored
+		
