@@ -1,0 +1,14 @@
+README:
+=======
+
+1.	Recursive solution
+	--	built off solutions to sub-problems
+	(1)	Bottom-up recursion
+		- most intuitive
+		- start with knowing how to solve the problem for a simple case
+		- the key is to think about how you can build the solution for one case off of the previous case
+	(2)	Top-down recursion
+		- how we can divide the problem for case N into sub-problems
+	--	recursive algorithms can be very space inefficient, each recursive call adds a new layer to the stack, which means that if your algorithm has O(N) recursive calls, then it uses O(N) memory
+
+2.	Dynamic Programming(DP)

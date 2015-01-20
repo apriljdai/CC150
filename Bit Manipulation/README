@@ -1,0 +1,48 @@
+README:
+=======
+
+1.	bit manipulation
+	--	0110 + 0110 = 0110 * 2 -> shifting 0110 left by 1
+	--	0011 * 0100 = 0011 * 4 -> multiplying by 2^n just left shifts a number by n
+	--	a ^ (~a) = sequences of 1s
+	--	x & (~0 << n) -> clear the n rightmost bits of x
+
+2.	bit facts and tricks
+	x ^ 0s = x
+	x ^ 1s = ~x
+	x ^ x = 0
+	x & 0s = 0
+	x & 1s = x
+	x & x = x
+	x | 0s = x
+	x | 1s = 1s
+	s | x = x
+
+3.	common bit tasks
+	--	get bit
+		shifts 1 over by i bits, clear all bits in num other than the bit at bit i, compare that to 0.
+		boolean getBit(int num, int i){
+			return ((num & (1 << i)) != 0);
+		}
+	--	set bit
+		shifts 1 over by i bits, by performing an OR with num, only the value at bit i will change.
+		int setBit(int num, int i){
+			return num | (1 << i);
+		}
+	--	clear bit
+		-	clear the ith bit and leave the remainder unchanged.
+			int clearBit(int num, int i){
+				int mask = ~(1 << i);
+				return num & mask;
+			}
+		-	clear all bits from the most significant bit through i(inclusive), just leave the last i bits.
+			int clearBitMSBthroughI(int num, int i){
+				int mask = (1 << i) - 1;
+				return num & mask;
+			}
+		-	clear all bits from i through 0(inclusive)
+			int clearBitsIthrough0(int num, int i){
+				int mask = ~(-1 >>> (31 - i));
+				return num & mask;
+			}
+	--	update bit
