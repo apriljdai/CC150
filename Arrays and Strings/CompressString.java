@@ -43,7 +43,7 @@ int countCompression(String str){
 		else{
 			last = str.charAt(i);
 			count = 1;
-			size += 1 + String.valueOf(count).length();
+			size += 1 + String.valueOf(count).length();//in case the value of count is over 9
 		}
 	}
 	size += 1 + String.valueOf(count).length();
