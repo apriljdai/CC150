@@ -38,4 +38,6 @@ public class SetOfStacks {
 	/*
 	follow up: implement a function popAt(int index) which performs a pop operation on a specific sub-stack
 	*/
+	//rollover system: if pop an element from stack 1, we need to remove the bottom of stack 2 and pucsh it onto stack 1.
+
 }

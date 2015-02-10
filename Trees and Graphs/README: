@@ -1,0 +1,32 @@
+README:
+=======
+
+1.	Binary Tree vs. Binary Search Tree
+	--	a BST imposes the condition that, for all nodes, the left children are less than or equal to the current node, which is less than all the right nodes.
+
+2.	Balanced vs. Unbalanced
+	--	if the tree is unbalanced, you should describe your algorithm in terms of both the average and the worst case time.
+	--	balancing a tree implies only that the depth of subtrees will not vary by more than a certain amount.
+
+3.	Full and Complete
+	--	full and complete trees are trees in which all leaves are at the bottom of the tree, and all non-leaf nodes have exactly two children.
+	--	a tree must have exactly 2^n - 1 nodes to meet full and complete condition
+
+4.	Binary tree traversal
+
+5.	Tree balancing
+	--	red-black trees
+	--	AVL trees
+
+6.	Tries
+	--	a trie is a variant of an n-ary tree in which characters are stored at each node.
+	--	each path down the tree may represent a word
+
+7.	Graph traversal
+	--	Breadth first search (BFS) 
+		-	visit each of a node r's adjacent nodes before searching any of r's grandchildren
+		-	involving a queue usually works best
+	--	Depth first search (DFS)
+		-	visit a node r and then iterate through each of r's adjacent nodes.
+		-	when visiting a node n that is adjacent to r, we visit all of n's adjacent nodes before going on to r's adjacent nodes.
+		-	when implementing DFS for a graph, we must check if the node has been visited.
